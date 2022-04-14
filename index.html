@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>João Victor - DoWhile 2022</title>
+    <title>João Victor | User card</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,47 +15,33 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div id="faixa"></div>
+      <div id="quebra"></div>
+      <section class="container">
         <div class="avatar">
           <span><img src="./images/build.svg" alt="Selo Rocketseat" /></span>
-          <img
-            src="http://lorempixel.com.br/185/185/"
-            alt="Foto pessoal"
-            id="userImage"
-          />
+          <img src="./images/UserIcon.jpg" alt="User Image" id="userImage" />
         </div>
-        <h1 id="userName">Name User</h1>
+        <h2 id="userName">Name User</h2>
         <a id="userLink" href="https://github.com/" target="_blank">
-          <img src="./images/github.svg" alt="ícone github" />
-          <span id="userLogin">userprofile</span></a
-        >
+          <i class="fa-brands fa-github"></i>
+          <span id="userLogin">userprofile</span></a>
         <p id="userBio">
-          An instructor focused on helping pople start programming for web
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
-        <ul id="socialLinks">
-          <li class="youtube">
-            <a href="https://youtube.com" target="_blank"
-              ><img src="./images/youtube.svg" alt="ícone youtube"
-            /></a>
-          </li>
-          <li class="facebook">
-            <a href="https://facebook.com" target="_blank"
-              ><img src="./images/facebook.svg" alt="ícone facebook"
-            /></a>
-          </li>
-          <li class="instagram">
-            <a href="https://instagram.com/" target="_blank"
-              ><img src="./images/instagram.svg" alt="ícone instagram"
-            /></a>
-          </li>
-          <li class="twitter">
-            <a href="https://twitter.com/" target="_blank"
-              ><img src="./images/twitter.svg" alt="ícone twitter"
-            /></a>
-          </li>
-        </ul>
-      </div>
+        <hr>
+        <form method="post" id="form">
+          <h2>Search user account</h2>
+            <div class="input">
+              <input type="search" name="IUserGithub" id="IUserGithub"/>
+              <label for="IUserGithub" id="label">username</label>
+            </div>
+            <button id="btnSearch">Search <i class="fa-brands fa-searchengin"></i></button>
+        </form>
+      </section>
     </main>
     <script src="./main.js"></script>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/673aed7dea.js" crossorigin="anonymous"></script>
   </body>
 </html>
