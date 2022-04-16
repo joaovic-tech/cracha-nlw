@@ -2,9 +2,13 @@ function GroupSearch() {
   group.style.display = 'grid'
   container.style.display = 'none'
   iconSearch.style.display = 'none'
+  if (window.screen.width <= 768) {
+    form.style.position = 'absolute'
+  }
 }
 
 function githubProfile(githubLogin) {
+  form.style.position = 'relative'
   const url = `https://api.github.com/users/${githubLogin}`
   fetch(url)
     .then(response => response.json())
@@ -12,24 +16,23 @@ function githubProfile(githubLogin) {
       if (data.message != 'Not Found') {
         emptyErrorText.style.display = 'none'
         IUserGithub.value = ''
-        userName.innerHTML = data.name
+        label.classList.remove('active')
+        userLink.style.display = 'inline-flex'
         userName.style.color = 'var(--light)'
-        userLogin.innerHTML = data.login
-        userBio.innerHTML = data.bio
+
+        userName.textContent = data.name
+        userLogin.textContent = data.login
+        userBio.textContent = data.bio
         userLink.href = data.html_url
         userImage.src = data.avatar_url
-
-        if (userLogin.innerHTML == 'joaovic-tech') {
-          seal.style.display = 'inline-block'
-        }
       } else {
         emptyErrorText.style.display = 'flex'
+        userName.style.color = 'red'
+        userLink.style.display = 'none'
+
         textError.innerHTML = `This <span style="color: var(--light)">${githubLogin}</span> user not found! <i class="fa-solid fa-face-sad-tear"></i>`
         userName.innerHTML = `This <span style="color: var(--light)">${githubLogin}</span> user not found! <i class="fa-solid fa-face-sad-tear"></i>`
-        userName.style.color = 'red'
-        userLogin.innerHTML = ''
-        userBio.innerHTML = ''
-        userLink.innerHTML = ''
+        userBio.textContent = ''
         userImage.src = './images/UserIcon.jpg'
       }
     })

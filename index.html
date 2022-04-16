@@ -48,13 +48,13 @@
               <span id="emptyErrorText"
                 ><i class="fa-solid fa-sort-up"></i><span id="textError"></span
               ></span>
-              <label for="IUserGithub" id="label">Username</label>
               <div id="contSearch">
+                <label for="IUserGithub" id="label">Username</label>
                 <input
                   type="search"
                   name="IUserGithub"
                   id="IUserGithub"
-                  onkeyup="LabelUsername()"
+                  onkeyup="LabelUsername()" maxlength="39"
                 />
                 <button id="btnSearch">
                   <i class="fa-brands fa-searchengin"></i>
@@ -63,11 +63,11 @@
             </div>
             <a href="#"></a>
           </div>
-          <i
+          <a href="#form"><i
             class="fa-brands fa-searchengin"
             id="iconSearch"
             onclick="GroupSearch()"
-          ></i>
+          ></i></a>
         </form>
       </section>
     </main>
