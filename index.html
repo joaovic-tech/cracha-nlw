@@ -14,34 +14,68 @@
     />
   </head>
   <body>
-    <main>
+    <main id="card">
       <div id="faixa"></div>
       <div id="quebra"></div>
-      <section class="container">
-        <div class="avatar">
-          <span><img src="./images/build.svg" alt="Selo Rocketseat" /></span>
-          <img src="./images/UserIcon.jpg" alt="User Image" id="userImage" />
-        </div>
-        <h2 id="userName">Name User</h2>
-        <a id="userLink" href="https://github.com/" target="_blank">
-          <i class="fa-brands fa-github"></i>
-          <span id="userLogin">userprofile</span></a>
-        <p id="userBio">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <hr>
-        <form method="post" id="form">
-          <h2>Search user account</h2>
-            <div class="input">
-              <input type="search" name="IUserGithub" id="IUserGithub"/>
-              <label for="IUserGithub" id="label">username</label>
+      <section class="section">
+        <div id="container">
+          <div class="avatar">
+            <span id="seal"
+              ><img src="./images/build.svg" alt="Rocketseat seal" />
+            </span>
+            <div id="contImgUser">
+              <img
+                src="./images/UserIcon.jpg"
+                alt="User Image"
+                id="userImage"
+              />
             </div>
-            <button id="btnSearch">Search <i class="fa-brands fa-searchengin"></i></button>
+          </div>
+          <h2 id="userName">Name User</h2>
+          <a id="userLink" href="https://github.com/" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <span id="userLogin">userprofile</span></a
+          >
+          <p id="userBio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <hr />
+        <form method="post" id="form">
+          <h2>Look for other users</h2>
+          <div id="group">
+            <div class="input">
+              <span id="emptyErrorText"
+                ><i class="fa-solid fa-sort-up"></i><span id="textError"></span
+              ></span>
+              <label for="IUserGithub" id="label">Username</label>
+              <div id="contSearch">
+                <input
+                  type="search"
+                  name="IUserGithub"
+                  id="IUserGithub"
+                  onkeyup="LabelUsername()"
+                />
+                <button id="btnSearch">
+                  <i class="fa-brands fa-searchengin"></i>
+                </button>
+              </div>
+            </div>
+            <a href="#"></a>
+          </div>
+          <i
+            class="fa-brands fa-searchengin"
+            id="iconSearch"
+            onclick="GroupSearch()"
+          ></i>
         </form>
       </section>
     </main>
     <script src="./main.js"></script>
     <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/673aed7dea.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/673aed7dea.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
