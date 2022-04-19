@@ -1,0 +1,327 @@
+#sidebar {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 78px;
+  background: var(--dark);
+  padding: 6px 14px;
+  transition: all .5s ease;
+}
+
+#sidebar.active {
+  width: 240px;
+}
+
+.logo {
+  color: var(--light);
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s ease;
+}
+
+#sidebar.active .logo {
+  opacity: 1;
+}
+
+.logo i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.logo_name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#btnMenu {
+  position: absolute;
+  color: var(--light);
+  cursor: pointer;
+  left: 50%;
+  top: 6px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+  transition: all .5s ease;
+}
+
+#btnMenu:hover {
+  background: var(--light);
+  color: var(--colorPrimary);
+}
+
+#sidebar.active #btnMenu {
+  left: 90%;
+}
+
+#sidebar #nav_list {
+  margin-top: 20px;
+}
+
+#sidebar #nav_list li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+}
+
+.tooltip {
+  position: absolute;
+  left: 122px;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 122px;
+  background: var(--light);
+  color: var(--colorPrimary);
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+
+#sidebar.active .tooltip {
+  display: none;
+}
+
+#sidebar #nav_list li:hover .tooltip {
+  transition: all .5s ease;
+  top: 50%;
+  opacity: 1;
+}
+
+#sidebar a {
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+  transition: all .4s ease;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+#sidebar a:hover {
+  background: var(--light);
+  color: var(--colorPrimary);
+}
+
+#sidebar #nav_list i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.links_name {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s ease;
+}
+
+#sidebar.active #form_search,
+#sidebar.active .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#form_search {
+  position: relative;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s ease;
+}
+
+#form_search h2 {
+  color: var(--light);
+  font-size: 24px;
+  margin: 10px auto;
+}
+
+#form_search input {
+  height: 50px;
+  width: 100%;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: var(--bg-color);
+  padding-left: 55px;
+  font-size: 18px;
+  color: var(--light);
+}
+
+#btnSearch {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  background: transparent;
+  color: var(--light);
+  border-color: transparent;
+  border: .2rem solid transparent;
+  border-bottom: .2rem solid var(--colorPrimary);
+  border-radius: 12px;
+  font-size: 22px;
+  transition: all .5s ease;
+}
+
+#btnSearch:hover {
+  color: var(--colorPrimary);
+  border: .2rem solid var(--colorPrimary);
+  background: var(--light);
+  box-shadow: 0 0 15px var(--colorPrimary);
+}
+
+#profile_content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: var(--light);
+}
+
+.profile {
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: none;
+  transition: all .5s ease;
+}
+
+#sidebar.active .profile {
+  background: var(--bg-color);
+}
+
+.profile_details {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+#sidebar.active .profile_details {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.profile_details img {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.name_job {
+  margin-left: 10px;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.job {
+  font-size: 12px;
+}
+
+#IAdmin {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all .4s ease;
+  background: var(--bg-color);
+}
+
+#IAdmin:hover {
+  color: var(--colorPrimary);
+}
+
+#sidebar.active #IAdmin {
+  left: 88%;
+  background: none;
+  color: var(--colorPrimary);
+}
+
+#modal_list{
+  position: absolute;
+  height: 100%;
+  left: 78px;
+  z-index: 4;
+  color: var(--light);
+  display: none;
+}
+
+.modal{
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s ease;
+}
+
+.modal h2{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.modal p{
+  padding: 20px;
+}
+
+.modal.showModal{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all .4s ease;
+}
+
+#sidebar.active ~ #modal_list{
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+#closeModel{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#closeModel:hover{
+  color: var(--colorPrimary);
+  text-shadow: 0 0 20px var(--colorPrimary);
+}

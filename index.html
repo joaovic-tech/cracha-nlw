@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>João Victor | User card</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,10 +15,93 @@
     />
   </head>
   <body>
-    <main id="card">
+    <nav id="sidebar">
+      <header class="logo_content">
+        <div class="logo">
+          <i class="fa-solid fa-id-card"></i>
+          <h2 class="logo_name">User card</h2>
+        </div>
+        <i class="fa-solid fa-bars" id="btnMenu" onclick="ShowSidebar()"></i>
+      </header>
+      <hr />
+      <ul id="nav_list">
+        <li>
+          <a href="#modal_color" onclick="ShowModal('modal_color')">
+            <i class="fa-solid fa-palette"></i>
+            <span class="links_name">Color</span>
+          </a>
+          <span class="tooltip">Color</span>
+        </li>
+        <li>
+          <a href="#modal_theme">
+            <i class="fa-solid fa-moon"></i>
+            <span class="links_name">Theme</span>
+          </a>
+          <span class="tooltip">Theme</span>
+        </li>
+        <li>
+          <a href="#modal_messages" onclick="ShowModal('modal_messages')">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span class="links_name">Messages</span>
+          </a>
+          <span class="tooltip">Messages</span>
+        </li>
+        <li>
+          <a href="#modal_about" onclick="ShowModal('modal_about')">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="links_name">About</span>
+          </a>
+          <span class="tooltip">About</span>
+        </li>
+      </ul>
+      <hr />
+      <form id="form_search">
+        <h2>Look for other users</h2>
+        <button id="btnSearch">
+          <i class="fa-brands fa-searchengin"></i>
+        </button>
+        <input type="text" id="ISearch" onclick="SendSearch()" placeholder="Username..." required>
+        <span class="tooltip">Search User</span>
+      </form>
+      <footer id="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="./images/profile.png" alt="Image profile" />
+            <div class="name_job">
+              <h2 class="name">João Victor</h2>
+              <p class="job">Web Developer</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-code" id="IAdmin" onclick="ShowSidebar()"></i>
+        </div>
+      </footer>
+    </nav>
+    <!-- Modal List -->
+    <ul id="modal_list">
+
+      <li id="modal_about" class="modal">
+        <i class="fa-solid fa-xmark" id="closeModel"></i>
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur recusandae earum reiciendis. Minima libero, quisquam recusandae deserunt inventore labore odio quo in, totam veritatis fuga vel saepe dolore dolores ipsum.<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi tempore exercitationem id assumenda adipisci, fuga rem soluta aliquam earum fugiat placeat debitis? Excepturi totam aperiam esse? Veritatis, iusto atque?</p>
+      </li>
+      <li id="modal_messages" class="modal">
+        <i class="fa-solid fa-xmark" id="closeModel"></i>
+        <h2>Messages</h2>
+        
+      </li>
+      <li id="modal_color" class="modal">
+        <i class="fa-solid fa-xmark" id="closeModel"></i>
+        <h2>Color</h2>
+        
+      </li>
+
+
+    </ul>
+    <!-- BADGE -->
+    <main id="badge_content">
       <div id="faixa"></div>
       <div id="quebra"></div>
-      <section class="section">
+      <div class="card">
         <div id="container">
           <div class="avatar">
             <span id="seal"
@@ -41,37 +125,10 @@
           </p>
         </div>
         <hr />
-        <form method="post" id="form">
-          <h2>Look for other users</h2>
-          <div id="group">
-            <div class="input">
-              <span id="emptyErrorText"
-                ><i class="fa-solid fa-sort-up"></i><span id="textError"></span
-              ></span>
-              <div id="contSearch">
-                <label for="IUserGithub" id="label">Username</label>
-                <input
-                  type="search"
-                  name="IUserGithub"
-                  id="IUserGithub"
-                  onkeyup="LabelUsername()" maxlength="39"
-                />
-                <button id="btnSearch">
-                  <i class="fa-brands fa-searchengin"></i>
-                </button>
-              </div>
-            </div>
-            <a href="#"></a>
-          </div>
-          <a href="#form"><i
-            class="fa-brands fa-searchengin"
-            id="iconSearch"
-            onclick="GroupSearch()"
-          ></i></a>
-        </form>
-      </section>
+      </div>
     </main>
-    <script src="./main.js"></script>
+    <!-- SCRIPTS -->
+    <script src="./js/main.js"></script>
     <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/673aed7dea.js"
