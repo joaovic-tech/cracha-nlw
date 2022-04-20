@@ -5,9 +5,9 @@
   left: 0;
   height: 100%;
   width: 78px;
-  background: var(--dark);
+  background: rgba(0,0,0,0.4);
   padding: 6px 14px;
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
 }
 
 #sidebar.active {
@@ -22,7 +22,7 @@
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
 }
 
 #sidebar.active .logo {
@@ -52,12 +52,12 @@
   text-align: center;
   line-height: 50px;
   transform: translateX(-50%);
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
 }
 
 #btnMenu:hover {
   background: var(--light);
-  color: var(--colorPrimary);
+  color: var(--color-primary);
 }
 
 #sidebar.active #btnMenu {
@@ -86,7 +86,7 @@
   height: 35px;
   width: 122px;
   background: var(--light);
-  color: var(--colorPrimary);
+  color: var(--color-primary);
   line-height: 35px;
   text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
@@ -101,7 +101,7 @@
 }
 
 #sidebar #nav_list li:hover .tooltip {
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
   top: 50%;
   opacity: 1;
 }
@@ -112,14 +112,14 @@
   align-items: center;
   text-decoration: none;
   outline: none;
-  transition: all .4s ease;
+  transition: .2s ease-in-out;
   border-radius: 12px;
   white-space: nowrap;
 }
 
 #sidebar a:hover {
   background: var(--light);
-  color: var(--colorPrimary);
+  color: var(--color-primary);
 }
 
 #sidebar #nav_list i {
@@ -133,7 +133,7 @@
 .links_name {
   opacity: 0;
   pointer-events: none;
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
 }
 
 #sidebar.active #form_search,
@@ -146,7 +146,7 @@
   position: relative;
   opacity: 0;
   pointer-events: none;
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
 }
 
 #form_search h2 {
@@ -164,7 +164,7 @@
   background: var(--bg-color);
   padding-left: 55px;
   font-size: 18px;
-  color: var(--light);
+  color: var(--color-primary);
 }
 
 #btnSearch {
@@ -182,17 +182,17 @@
   color: var(--light);
   border-color: transparent;
   border: .2rem solid transparent;
-  border-bottom: .2rem solid var(--colorPrimary);
+  border-bottom: .2rem solid var(--color-primary);
   border-radius: 12px;
   font-size: 22px;
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
 }
 
 #btnSearch:hover {
-  color: var(--colorPrimary);
-  border: .2rem solid var(--colorPrimary);
+  color: var(--color-primary);
+  border: .2rem solid var(--color-primary);
   background: var(--light);
-  box-shadow: 0 0 15px var(--colorPrimary);
+  box-shadow: 0 0 15px var(--color-primary);
 }
 
 #profile_content {
@@ -208,7 +208,7 @@
   padding: 10px 6px;
   height: 60px;
   background: none;
-  transition: all .5s ease;
+  transition: .2s ease-in-out;
 }
 
 #sidebar.active .profile {
@@ -258,62 +258,50 @@
   font-size: 20px;
   border-radius: 12px;
   text-align: center;
-  transition: all .4s ease;
+  transition: .2s ease-in-out;
   background: var(--bg-color);
 }
 
 #IAdmin:hover {
-  color: var(--colorPrimary);
+  color: var(--color-primary);
 }
 
 #sidebar.active #IAdmin {
   left: 88%;
   background: none;
-  color: var(--colorPrimary);
+  color: var(--color-primary);
 }
 
-#modal_list{
+/* ************************************************ */
+
+.modal {
   position: absolute;
   height: 100%;
-  left: 78px;
-  z-index: 4;
-  color: var(--light);
-  display: none;
-}
-
-.modal{
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: column;
-  margin: auto;
   width: 100%;
-  height: 100%;
-  opacity: 0;
+  z-index: 6;
+  color: var(--light);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);opacity: 0;
   pointer-events: none;
-  transition: all .4s ease;
+  overflow: auto;transition: .2s ease-in-out;
 }
 
-.modal h2{
-  margin-top: 2rem;
+.modal.showModal {
+  opacity: 1;
+  pointer-events: auto;
+  transition: .2s ease-in-out;
+}
+
+.titleModal {
+  display: flex;
   text-align: center;
-}
-
-.modal p{
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
 }
 
-.modal.showModal{
-  opacity: 1;
-  pointer-events: auto;
-  transition: all .4s ease;
-}
-
-#sidebar.active ~ #modal_list{
-  width: calc(100% - 240px);
-  left: 240px;
-}
-
-#closeModel{
+.fa-xmark {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -321,7 +309,7 @@
   cursor: pointer;
 }
 
-#closeModel:hover{
-  color: var(--colorPrimary);
-  text-shadow: 0 0 20px var(--colorPrimary);
+.fa-xmark:hover {
+  color: var(--color-primary);
+  text-shadow: 0 0 20px var(--color-primary);
 }

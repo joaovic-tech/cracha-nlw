@@ -8,8 +8,11 @@
   --dark: #09090A;
   --bg-color: #202024;
   --light: hsl(240, 9%, 89%);
-  --colorPrimary: #FF008E;
-  --colorSecundary: #FFCD1E;
+  --color-primary: #FF008E;
+  --color-secundary: #FFCD1E;
+  --img-background: url(../images/default-background.svg);
+  --img-light: url(../images/default-light.svg);
+  --img-range: url(../images/default-range.svg);
 }
 
 /* clears the 'X' from Edge */
@@ -44,12 +47,17 @@ body {
 body {
   display: grid;
   place-items: center;
-  background: url(../images/background.svg) no-repeat center/cover;
   overflow: hidden;
+  background-image: var(--img-light);
+  background-image: var(--img-light);
+  background-size: cover;
+  background-position: center;
 }
 
 #badge_content {
-  background: url(../images/background.svg) no-repeat center/cover;
+  background-image: var(--img-background);
+  background-size: cover;
+  background-position: center;
   width: 100vw;
   min-height: 812px;
   height: 100vh;
@@ -112,8 +120,8 @@ h2#userName {
 }
 
 #badge_content a:hover {
-  color: var(--colorSecundary);
-  text-shadow: 0 0 20px var(--colorSecundary);
+  color: var(--color-secundary);
+  text-shadow: 0 0 20px var(--color-secundary);
 }
 
 #badge_content p {
@@ -126,13 +134,71 @@ hr {
   margin: 1rem auto;
   height: .2rem;
   border: none;
-  background-image: linear-gradient(161.24deg, var(--colorPrimary) -15.25%, var(--colorSecundary) 110%);
-  box-shadow: 0 0 5px var(--colorPrimary);
+  background-image: linear-gradient(161.24deg, var(--color-primary) -15.25%, var(--color-secundary) 110%);
+  box-shadow: 0 0 5px var(--color-primary);
+}
+
+#contentTheme {
+  display: inline-block;
+  flex-direction: column;
+  columns: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#contentTheme li {
+  list-style: none;
+  background: var(--bg-color);
+  color: var(--light);
+  display: inline-flex;
+  flex-direction: column;
+  columns: 1;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  border-radius: 10px;
+  transition: all .2s ease;
+}
+
+#contentTheme li:focus,
+#contentTheme li:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.theme {
+  width: 80px;
+  height: 80px;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  margin: 20px auto;
+}
+
+.theme.d {
+  background-image: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 110%);
+}
+
+.theme.b {
+  background-image: linear-gradient(161.24deg, #0047FF -15.25%, #57E5DC 110%);
+}
+
+.theme.g {
+  background-image: linear-gradient(161.24deg, #00FF19 -15.25%, #57E5DC 110%);
+}
+
+.theme.p {
+  background-image: linear-gradient(161.24deg, #D800B9 -15.25%, #8257E5 110%);
 }
 
 @media (min-width: 960px) {
   body {
-    background: url('../images/Desktop.svg') no-repeat center/cover;
+    background-image: var(--img-light);
+    background-image: var(--img-light);
+    background-size: cover;
+    background-position: center;
     background-color: var(--dark);
     display: flex;
     justify-content: center;
@@ -157,7 +223,9 @@ hr {
   }
 
   #faixa {
-    background: url(../images/faixa.svg) no-repeat center/cover;
+    background-image: var(--img-range);
+    background-size: cover;
+    background-position: center;
     width: 13%;
     height: 100%;
     position: absolute;
@@ -167,7 +235,9 @@ hr {
   }
 
   #quebra {
-    background: url(../images/quebra.svg) no-repeat center/cover;
+    background-image: url(../images/quebra.svg);
+    background-size: cover;
+    background-position: center;
     width: 17%;
     height: 2%;
     position: absolute;

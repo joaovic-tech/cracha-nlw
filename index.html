@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,7 +60,13 @@
         <button id="btnSearch">
           <i class="fa-brands fa-searchengin"></i>
         </button>
-        <input type="text" id="ISearch" onclick="SendSearch()" placeholder="Username..." required>
+        <input
+          type="text"
+          id="ISearch"
+          onclick="SendSearch()"
+          placeholder="Username..."
+          required
+        />
         <span class="tooltip">Search User</span>
       </form>
       <footer id="profile_content">
@@ -77,26 +83,61 @@
       </footer>
     </nav>
     <!-- Modal List -->
-    <ul id="modal_list">
+    <section id="modal_color" class="modal"> <!-- modal_color -->
+      <i class="fa-solid fa-xmark" onclick="CloseModal('modal_color')"></i>
+      <div class="titleModal">
+        <h2>Change color themes</h2>
+        <i class="fa-solid fa-palette"></i>
+      </div>
 
-      <li id="modal_about" class="modal">
-        <i class="fa-solid fa-xmark" id="closeModel"></i>
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur recusandae earum reiciendis. Minima libero, quisquam recusandae deserunt inventore labore odio quo in, totam veritatis fuga vel saepe dolore dolores ipsum.<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nisi tempore exercitationem id assumenda adipisci, fuga rem soluta aliquam earum fugiat placeat debitis? Excepturi totam aperiam esse? Veritatis, iusto atque?</p>
-      </li>
-      <li id="modal_messages" class="modal">
-        <i class="fa-solid fa-xmark" id="closeModel"></i>
-        <h2>Messages</h2>
+      <ul id="contentTheme">
+
+        <li onclick="ColorThemes('default')">
+          <div class="theme d"></div>
+          <h2>Do-While 2021 (Default)</h2>
+        </li>
         
-      </li>
-      <li id="modal_color" class="modal">
-        <i class="fa-solid fa-xmark" id="closeModel"></i>
-        <h2>Color</h2>
+        <li onclick="ColorThemes('blue')">
+          <div class="theme b"></div>
+          <h2>Blue gradient</h2>
+        </li>
         
-      </li>
+        <li onclick="ColorThemes('green')">
+          <div class="theme g"></div>
+          <h2>Green gradient</h2>
+        </li>
 
+        <li onclick="ColorThemes('purple')">
+          <div class="theme p"></div>
+          <h2>Purple gradient</h2>
+        </li>
+      </ul>
+    </section>
 
-    </ul>
+    <section id="modal_messages" class="modal"> <!-- modal_messages -->
+      <i class="fa-solid fa-xmark" onclick="CloseModal('modal_messages')"></i>
+      <h2>Messages</h2>
+      <form>
+        <fieldset>
+          <legend>Title</legend>
+          <input type="text" />
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="modal_about" class="modal"> <!-- modal_about -->
+      <i class="fa-solid fa-xmark" onclick="CloseModal('modal_about')"></i>
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+        recusandae earum reiciendis. Minima libero, quisquam recusandae deserunt
+        inventore labore odio quo in, totam veritatis fuga vel saepe dolore
+        dolores ipsum.<br /><br />Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Aut nisi tempore exercitationem id assumenda adipisci,
+        fuga rem soluta aliquam earum fugiat placeat debitis? Excepturi totam
+        aperiam esse? Veritatis, iusto atque?
+      </p>
+    </section>
     <!-- BADGE -->
     <main id="badge_content">
       <div id="faixa"></div>

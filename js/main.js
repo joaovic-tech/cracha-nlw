@@ -31,13 +31,37 @@ function ShowSidebar() {
 }
 
 // Show Modals Lists
-modal_list.style.display = 'none'
 function ShowModal(m){
-  var modal = document.getElementById(m)
-  modal.classList.toggle('showModal')
-  if(modal_list.style.display == 'none'){
-    modal_list.style.display = 'block'
-  } else {
-    modal_list.style.display = 'none'
+  const modalContainer = document.getElementById(m)
+  
+  modalContainer.classList.toggle('showModal')
+}
+
+function CloseModal(m){
+  const modal = document.getElementById(m)
+  modal.classList.remove('showModal')
+}
+
+const root = document.documentElement; 
+function ColorThemes(color){
+  if(color == 'default'){
+    root.style.setProperty('--color-primary', '#FF008E');
+    root.style.setProperty('--color-secundary', '#FFCD1E');
   }
+  if(color == 'blue'){
+    root.style.setProperty('--color-primary', '#0047FF');
+    root.style.setProperty('--color-secundary', '#57E5DC');
+  }
+  if(color == 'green'){
+    root.style.setProperty('--color-primary', '#00FF19');
+    root.style.setProperty('--color-secundary', '#57E5DC');
+  }
+  if(color == 'purple'){
+    root.style.setProperty('--color-primary', '#D800B9');
+    root.style.setProperty('--color-secundary', '#8257E5');
+  }
+  root.style.setProperty('--img-background', `url(../images/${color}-background.svg)`);
+  root.style.setProperty('--img-light', `url(../images/${color}-light.svg)`);
+  root.style.setProperty('--img-range', `url(../images/${color}-range.svg)`);
+  closeModal.click()
 }
