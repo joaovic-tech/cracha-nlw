@@ -5,9 +5,11 @@
   left: 0;
   height: 100%;
   width: 78px;
-  background: rgba(0,0,0,0.4);
+  background-image: linear-gradient(45deg, var(--bg-color), transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgb(0 0 0 / 30%);
   padding: 6px 14px;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
 #sidebar.active {
@@ -15,14 +17,14 @@
 }
 
 .logo {
-  color: var(--light);
+  color: var(--color-text);
   display: flex;
   height: 50px;
   width: 100%;
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
 #sidebar.active .logo {
@@ -41,7 +43,7 @@
 
 #btnMenu {
   position: absolute;
-  color: var(--light);
+  color: var(--color-text);
   cursor: pointer;
   left: 50%;
   top: 6px;
@@ -52,11 +54,11 @@
   text-align: center;
   line-height: 50px;
   transform: translateX(-50%);
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
 #btnMenu:hover {
-  background: var(--light);
+  background: var(--color-text);
   color: var(--color-primary);
 }
 
@@ -85,12 +87,12 @@
   border-radius: 6px;
   height: 35px;
   width: 122px;
-  background: var(--light);
+  background: var(--color-text);
   color: var(--color-primary);
   line-height: 35px;
   text-align: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
-  transition: 0s;
+
+  /* transition: all .2s ease; */
   opacity: 0;
   pointer-events: none;
   display: block;
@@ -101,24 +103,24 @@
 }
 
 #sidebar #nav_list li:hover .tooltip {
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
   top: 50%;
   opacity: 1;
 }
 
 #sidebar a {
-  color: var(--light);
+  color: var(--color-text);
   display: flex;
   align-items: center;
   text-decoration: none;
   outline: none;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
   border-radius: 12px;
   white-space: nowrap;
 }
 
 #sidebar a:hover {
-  background: var(--light);
+  background: var(--color-text);
   color: var(--color-primary);
 }
 
@@ -130,13 +132,18 @@
   text-align: center;
 }
 
+a#light {
+  display: none;
+}
+
 .links_name {
   opacity: 0;
   pointer-events: none;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
-#sidebar.active #form_search,
+#sidebar.active #form_search h2,
+#sidebar.active #form_search input,
 #sidebar.active .links_name {
   opacity: 1;
   pointer-events: auto;
@@ -144,15 +151,15 @@
 
 #form_search {
   position: relative;
-  opacity: 0;
-  pointer-events: none;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
 #form_search h2 {
-  color: var(--light);
+  color: var(--color-text);
   font-size: 24px;
   margin: 10px auto;
+  opacity: 0;
+  pointer-events: none;
 }
 
 #form_search input {
@@ -162,37 +169,46 @@
   outline: none;
   border: none;
   background: var(--bg-color);
-  padding-left: 55px;
+  border-bottom: .2rem solid var(--color-primary);
+  padding-left: 20px;
   font-size: 18px;
   color: var(--color-primary);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#form_search input:focus {
+  box-shadow: 0 0 0 .2rem var(--color-primary);
 }
 
 #btnSearch {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   height: 50px;
   min-width: 50px;
-  border-radius: 12px;
   line-height: 50px;
+  display: flex;
   text-align: center;
+  align-items: center;
   cursor: pointer;
+  justify-content: center;
   z-index: 10;
   background: transparent;
-  color: var(--light);
+  color: var(--color-text);
   border-color: transparent;
   border: .2rem solid transparent;
   border-bottom: .2rem solid var(--color-primary);
-  border-radius: 12px;
   font-size: 22px;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
 #btnSearch:hover {
-  color: var(--color-primary);
+  color: var(--bg-color);
   border: .2rem solid var(--color-primary);
-  background: var(--light);
+  background: var(--color-primary);
   box-shadow: 0 0 15px var(--color-primary);
+  border-radius: 100%;
 }
 
 #profile_content {
@@ -200,7 +216,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  color: var(--light);
+  color: var(--color-text);
 }
 
 .profile {
@@ -208,7 +224,7 @@
   padding: 10px 6px;
   height: 60px;
   background: none;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
 #sidebar.active .profile {
@@ -258,8 +274,8 @@
   font-size: 20px;
   border-radius: 12px;
   text-align: center;
-  transition: .2s ease-in-out;
-  background: var(--bg-color);
+  /* transition: all .2s ease; */
+  background: var(--bg);
 }
 
 #IAdmin:hover {
@@ -279,17 +295,19 @@
   height: 100%;
   width: 100%;
   z-index: 6;
-  color: var(--light);
+  color: var(--color-text);
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(3px);opacity: 0;
+  backdrop-filter: blur(3px);
+  opacity: 0;
   pointer-events: none;
-  overflow: auto;transition: .2s ease-in-out;
+  overflow: auto;
+  /* transition: all .2s ease; */
 }
 
 .modal.showModal {
   opacity: 1;
   pointer-events: auto;
-  transition: .2s ease-in-out;
+  /* transition: all .2s ease; */
 }
 
 .titleModal {

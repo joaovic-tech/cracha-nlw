@@ -33,11 +33,16 @@
           <span class="tooltip">Color</span>
         </li>
         <li>
-          <a href="#modal_theme">
+          <a href="#modal_mode" onclick="ColorThemes('dark')" id="dark">
             <i class="fa-solid fa-moon"></i>
-            <span class="links_name">Theme</span>
+            <span class="links_name">Dark Mode</span>
+            <span class="tooltip">Dark Mode</span>
           </a>
-          <span class="tooltip">Theme</span>
+          <a href="#modal_mode" onclick="ColorThemes('light')" id="light">
+            <i class="fa-solid fa-sun"></i>
+            <span class="links_name">Light Mode</span>
+            <span class="tooltip">Light Mode</span>
+          </a>
         </li>
         <li>
           <a href="#modal_messages" onclick="ShowModal('modal_messages')">
@@ -63,7 +68,6 @@
         <input
           type="text"
           id="ISearch"
-          onclick="SendSearch()"
           placeholder="Username..."
           required
         />
@@ -84,7 +88,7 @@
     </nav>
     <!-- Modal List -->
     <section id="modal_color" class="modal"> <!-- modal_color -->
-      <i class="fa-solid fa-xmark" onclick="CloseModal('modal_color')"></i>
+      <i class="fa-solid fa-xmark" id="closeModal" onclick="CloseModal('modal_color')"></i>
       <div class="titleModal">
         <h2>Change color themes</h2>
         <i class="fa-solid fa-palette"></i>
@@ -92,22 +96,22 @@
 
       <ul id="contentTheme">
 
-        <li onclick="ColorThemes('default')">
+        <li onclick="ChangeColors('default')">
           <div class="theme d"></div>
           <h2>Do-While 2021 (Default)</h2>
         </li>
         
-        <li onclick="ColorThemes('blue')">
+        <li onclick="ChangeColors('blue')">
           <div class="theme b"></div>
           <h2>Blue gradient</h2>
         </li>
         
-        <li onclick="ColorThemes('green')">
+        <li onclick="ChangeColors('green')">
           <div class="theme g"></div>
           <h2>Green gradient</h2>
         </li>
 
-        <li onclick="ColorThemes('purple')">
+        <li onclick="ChangeColors('purple')">
           <div class="theme p"></div>
           <h2>Purple gradient</h2>
         </li>
@@ -115,7 +119,7 @@
     </section>
 
     <section id="modal_messages" class="modal"> <!-- modal_messages -->
-      <i class="fa-solid fa-xmark" onclick="CloseModal('modal_messages')"></i>
+      <i class="fa-solid fa-xmark" id="closeModal" onclick="CloseModal('modal_messages')"></i>
       <h2>Messages</h2>
       <form>
         <fieldset>
@@ -126,7 +130,7 @@
     </section>
 
     <section id="modal_about" class="modal"> <!-- modal_about -->
-      <i class="fa-solid fa-xmark" onclick="CloseModal('modal_about')"></i>
+      <i class="fa-solid fa-xmark" id="closeModal" onclick="CloseModal('modal_about')"></i>
       <h2>About</h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
@@ -168,8 +172,10 @@
         <hr />
       </div>
     </main>
-    <!-- SCRIPTS -->
+    <!-- My scripts -->
     <script src="./js/main.js"></script>
+    <script src="./js/themes.js"></script>
+
     <!-- Fontawesome -->
     <script
       src="https://kit.fontawesome.com/673aed7dea.js"

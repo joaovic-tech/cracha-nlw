@@ -5,9 +5,11 @@
 }
 
 :root {
-  --dark: #09090A;
+  --bg: #09090A;
   --bg-color: #202024;
-  --light: hsl(240, 9%, 89%);
+  --bg-color-fixed: #202024;
+  --color-text: hsl(240, 9%, 89%);
+  --color-text-fixed: hsl(240, 9%, 89%);
   --color-primary: #FF008E;
   --color-secundary: #FFCD1E;
   --img-background: url(../images/default-background.svg);
@@ -49,20 +51,20 @@ body {
   place-items: center;
   overflow: hidden;
   background-image: var(--img-light);
-  background-image: var(--img-light);
   background-size: cover;
+  backdrop-filter: blur(150px);
   background-position: center;
+  background-color: var(--bg-color);
 }
 
 #badge_content {
-  background-image: var(--img-background);
-  background-size: cover;
-  background-position: center;
+  position: absolute;background: var(--img-background) center/cover;
+  background-color: transparent;
+  box-shadow: 0 0 12px var(--color-primary);
   width: 100vw;
   min-height: 812px;
   height: 100vh;
   border-radius: .8rem;
-
 }
 
 .card {
@@ -70,8 +72,9 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   text-align: center;
-  color: var(--light);
+  color: var(--color-text);
 }
 
 .avatar {
@@ -94,7 +97,7 @@ body {
 
 #contImgUser img {
   width: 100%;
-  box-shadow: 0 0 2rem var(--dark);
+  box-shadow: 0 0 2rem var(--bg);
 }
 
 h2#userName {
@@ -107,21 +110,22 @@ h2#userName {
 }
 
 #badge_content a {
-  color: var(--light);
+  color: var(--color-text);
   text-decoration: none;
   margin-top: 0.25rem;
   display: inline-flex;
   gap: 0.75rem;
+  border-radius: 12px;
   text-align: center;
   justify-content: center;
   align-items: center;
   outline: none;
-  transition: .1s ease-in-out;
+  /* transition: .1s ease-in-out; */
 }
 
 #badge_content a:hover {
-  color: var(--color-secundary);
-  text-shadow: 0 0 20px var(--color-secundary);
+  color: var(--color-primary);
+  text-shadow: 0 0 20px var(--color-primary);
 }
 
 #badge_content p {
@@ -135,7 +139,7 @@ hr {
   height: .2rem;
   border: none;
   background-image: linear-gradient(161.24deg, var(--color-primary) -15.25%, var(--color-secundary) 110%);
-  box-shadow: 0 0 5px var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
 }
 
 #contentTheme {
@@ -150,7 +154,7 @@ hr {
 #contentTheme li {
   list-style: none;
   background: var(--bg-color);
-  color: var(--light);
+  color: var(--color-text);
   display: inline-flex;
   flex-direction: column;
   columns: 1;
@@ -161,13 +165,13 @@ hr {
   height: 200px;
   margin: 15px;
   border-radius: 10px;
-  transition: all .2s ease;
+  /* transition: all .2s ease; */
 }
 
 #contentTheme li:focus,
 #contentTheme li:hover {
-  background: var(--light);
-  color: var(--dark);
+  background: var(--color-text);
+  color: var(--bg);
 }
 
 .theme {
@@ -195,11 +199,6 @@ hr {
 
 @media (min-width: 960px) {
   body {
-    background-image: var(--img-light);
-    background-image: var(--img-light);
-    background-size: cover;
-    background-position: center;
-    background-color: var(--dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,7 +258,7 @@ hr {
 
   #contImgUser img {
     width: 100%;
-    box-shadow: 0 0 2rem var(--dark);
+    box-shadow: 0 0 2rem var(--bg);
   }
 
   p {
