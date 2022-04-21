@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>João Victor | User card</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/sidebar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,6 +12,17 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <title>João Victor | User card</title>
+    <!-- My scripts -->
+    <script src="./js/github.js" defer></script>
+    <script src="./js/themes.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/673aed7dea.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
   <body>
     <nav id="sidebar">
@@ -65,12 +75,7 @@
         <button id="btnSearch">
           <i class="fa-brands fa-searchengin"></i>
         </button>
-        <input
-          type="text"
-          id="ISearch"
-          placeholder="Username..."
-          required
-        />
+        <input type="text" id="ISearch" placeholder="Username..." required />
         <span class="tooltip">Search User</span>
       </form>
       <footer id="profile_content">
@@ -87,25 +92,29 @@
       </footer>
     </nav>
     <!-- Modal List -->
-    <section id="modal_color" class="modal"> <!-- modal_color -->
-      <i class="fa-solid fa-xmark" id="closeModal" onclick="CloseModal('modal_color')"></i>
+    <section id="modal_color" class="modal">
+      <!-- modal_color -->
+      <i
+        class="fa-solid fa-xmark"
+        id="closeModal"
+        onclick="CloseModal('modal_color')"
+      ></i>
       <div class="titleModal">
         <h2>Change color themes</h2>
         <i class="fa-solid fa-palette"></i>
       </div>
 
       <ul id="contentTheme">
-
         <li onclick="ChangeColors('default')">
           <div class="theme d"></div>
           <h2>Do-While 2021 (Default)</h2>
         </li>
-        
+
         <li onclick="ChangeColors('blue')">
           <div class="theme b"></div>
           <h2>Blue gradient</h2>
         </li>
-        
+
         <li onclick="ChangeColors('green')">
           <div class="theme g"></div>
           <h2>Green gradient</h2>
@@ -118,8 +127,13 @@
       </ul>
     </section>
 
-    <section id="modal_messages" class="modal"> <!-- modal_messages -->
-      <i class="fa-solid fa-xmark" id="closeModal" onclick="CloseModal('modal_messages')"></i>
+    <section id="modal_messages" class="modal">
+      <!-- modal_messages -->
+      <i
+        class="fa-solid fa-xmark"
+        id="closeModal"
+        onclick="CloseModal('modal_messages')"
+      ></i>
       <h2>Messages</h2>
       <form>
         <fieldset>
@@ -129,8 +143,13 @@
       </form>
     </section>
 
-    <section id="modal_about" class="modal"> <!-- modal_about -->
-      <i class="fa-solid fa-xmark" id="closeModal" onclick="CloseModal('modal_about')"></i>
+    <section id="modal_about" class="modal">
+      <!-- modal_about -->
+      <i
+        class="fa-solid fa-xmark"
+        id="closeModal"
+        onclick="CloseModal('modal_about')"
+      ></i>
       <h2>About</h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
@@ -146,7 +165,7 @@
     <main id="badge_content">
       <div id="faixa"></div>
       <div id="quebra"></div>
-      <div class="card">
+      <section class="card">
         <div id="container">
           <div class="avatar">
             <span id="seal"
@@ -170,16 +189,25 @@
           </p>
         </div>
         <hr />
-      </div>
+        <footer id="contentInfo">
+          <div class="info">
+            <h2>repository</h2>
+            <span id="repository">0</span>
+          </div>
+          <div class="info">
+            <h2>followers</h2>
+            <span id="followers">0</span>
+          </div>
+          <div class="info">
+            <h2>following</h2>
+            <span id="following">0</span>
+          </div>
+        </footer>
+      </section>
     </main>
-    <!-- My scripts -->
-    <script src="./js/main.js"></script>
-    <script src="./js/themes.js"></script>
-
-    <!-- Fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/673aed7dea.js"
-      crossorigin="anonymous"
-    ></script>
+    <div id="hideSidebar">
+      <i class="fa-solid fa-eye-slash" onclick="HideSidebar()"></i>
+      <i class="fa-solid fa-eye" onclick="HideSidebar()"></i>
+    </div>
   </body>
 </html>

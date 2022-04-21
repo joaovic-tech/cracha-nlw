@@ -9,7 +9,7 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 0 40px rgb(0 0 0 / 30%);
   padding: 6px 14px;
-  /* transition: all .2s ease; */
+  transition: width 1000ms ease-out;
 }
 
 #sidebar.active {
@@ -24,11 +24,13 @@
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  /* transition: all .2s ease; */
+
+  transition: all .2s ease;
 }
 
 #sidebar.active .logo {
   opacity: 1;
+
 }
 
 .logo i {
@@ -50,16 +52,18 @@
   font-size: 20px;
   height: 50px;
   width: 50px;
-  border-radius: 12px;
+
   text-align: center;
   line-height: 50px;
   transform: translateX(-50%);
-  /* transition: all .2s ease; */
+
+  transition: border-radius .1s ease-in-out;
 }
 
 #btnMenu:hover {
   background: var(--color-text);
   color: var(--color-primary);
+  border-radius: 12px;
 }
 
 #sidebar.active #btnMenu {
@@ -81,29 +85,28 @@
 
 .tooltip {
   position: absolute;
-  left: 122px;
+  left: 120px;
   top: 0;
   transform: translate(-50%, -50%);
-  border-radius: 6px;
+  border-radius: 4px;
   height: 35px;
   width: 122px;
   background: var(--color-text);
   color: var(--color-primary);
   line-height: 35px;
   text-align: center;
-
-  /* transition: all .2s ease; */
   opacity: 0;
   pointer-events: none;
   display: block;
+  transition: top 250ms ease-in-out;
 }
 
 #sidebar.active .tooltip {
+  left: 0;
   display: none;
 }
 
 #sidebar #nav_list li:hover .tooltip {
-  /* transition: all .2s ease; */
   top: 50%;
   opacity: 1;
 }
@@ -113,8 +116,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  outline: none;
-  /* transition: all .2s ease; */
+  transition: all .1s;
   border-radius: 12px;
   white-space: nowrap;
 }
@@ -139,7 +141,7 @@ a#light {
 .links_name {
   opacity: 0;
   pointer-events: none;
-  /* transition: all .2s ease; */
+  transition: all .2s ease;
 }
 
 #sidebar.active #form_search h2,
@@ -160,21 +162,23 @@ a#light {
   margin: 10px auto;
   opacity: 0;
   pointer-events: none;
+  transition: all .2s ease;
 }
 
 #form_search input {
   height: 50px;
   width: 100%;
   border-radius: 12px;
-  outline: none;
   border: none;
   background: var(--bg-color);
   border-bottom: .2rem solid var(--color-primary);
-  padding-left: 20px;
+  padding-left: 11px;
+  padding-right: 56px;
   font-size: 18px;
   color: var(--color-primary);
   opacity: 0;
   pointer-events: none;
+  transition: box-shadow .2s;
 }
 
 #form_search input:focus {
@@ -199,8 +203,9 @@ a#light {
   border-color: transparent;
   border: .2rem solid transparent;
   border-bottom: .2rem solid var(--color-primary);
+  border-bottom-right-radius: 12px;
   font-size: 22px;
-  /* transition: all .2s ease; */
+  transition: border-radius .2s;
 }
 
 #btnSearch:hover {
@@ -208,7 +213,7 @@ a#light {
   border: .2rem solid var(--color-primary);
   background: var(--color-primary);
   box-shadow: 0 0 15px var(--color-primary);
-  border-radius: 100%;
+  border-radius: 12px;
 }
 
 #profile_content {
@@ -330,4 +335,39 @@ a#light {
 .fa-xmark:hover {
   color: var(--color-primary);
   text-shadow: 0 0 20px var(--color-primary);
+}
+
+#hideSidebar {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+
+#hideSidebar i {
+  color: var(--color-text);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color .1s;
+}
+
+#hideSidebar i:focus,
+#hideSidebar i:hover {
+  color: var(--color-primary);
+}
+
+#sidebar.hide,
+#hideSidebar.icon .fa-eye,
+.fa-eye-slash {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .2s ease;
+}
+
+#hideSidebar.icon .fa-eye {
+  display: none;
+}
+
+#hideSidebar.icon .fa-eye-slash {
+  opacity: .2;
+  pointer-events: auto;
 }

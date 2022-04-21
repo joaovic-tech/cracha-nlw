@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 :root {
@@ -52,13 +53,14 @@ body {
   overflow: hidden;
   background-image: var(--img-light);
   background-size: cover;
-  backdrop-filter: blur(150px);
+  backdrop-filter: blur(250px);
   background-position: center;
-  background-color: var(--bg-color);
+  background-color: var(--bg);
 }
 
 #badge_content {
-  position: absolute;background: var(--img-background) center/cover;
+  position: relative;
+  background: var(--img-background) no-repeat center/cover;
   background-color: transparent;
   box-shadow: 0 0 12px var(--color-primary);
   width: 100vw;
@@ -119,8 +121,6 @@ h2#userName {
   text-align: center;
   justify-content: center;
   align-items: center;
-  outline: none;
-  /* transition: .1s ease-in-out; */
 }
 
 #badge_content a:hover {
@@ -140,6 +140,17 @@ hr {
   border: none;
   background-image: linear-gradient(161.24deg, var(--color-primary) -15.25%, var(--color-secundary) 110%);
   box-shadow: 0 0 10px var(--color-primary);
+}
+
+#contentInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 16px;
 }
 
 #contentTheme {
@@ -206,7 +217,7 @@ hr {
   }
 
   #badge_content {
-    position: relative;
+    position: absolute;
     width: 30%;
     height: 85%;
     min-height: auto;
