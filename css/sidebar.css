@@ -5,11 +5,11 @@
   left: 0;
   height: 100%;
   width: 78px;
-  background-image: linear-gradient(45deg, var(--bg-color), transparent);
+  background-image: linear-gradient(220deg, transparent, var(--bg-color));
   backdrop-filter: blur(10px);
   box-shadow: 0 0 40px rgb(0 0 0 / 30%);
   padding: 6px 14px;
-  transition: width 1000ms ease-out;
+  transition: width .2s ease;
 }
 
 #sidebar.active {
@@ -52,19 +52,17 @@
   font-size: 20px;
   height: 50px;
   width: 50px;
-
   text-align: center;
   line-height: 50px;
   transform: translateX(-50%);
-
-  transition: border-radius .1s ease-in-out;
+  transition: .1s ease-in-out;
 }
 
 #btnMenu:hover {
-  background: var(--color-text);
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--bg);
   border-radius: 12px;
-}
+box-shadow: 0 0 12px var(--color-primary);}
 
 #sidebar.active #btnMenu {
   left: 90%;
@@ -85,20 +83,19 @@
 
 .tooltip {
   position: absolute;
-  left: 120px;
+  left: 110px;
   top: 0;
   transform: translate(-50%, -50%);
   border-radius: 4px;
   height: 35px;
   width: 122px;
-  background: var(--color-text);
   color: var(--color-primary);
   line-height: 35px;
   text-align: center;
   opacity: 0;
   pointer-events: none;
   display: block;
-  transition: top 250ms ease-in-out;
+  transition: top .2s;
 }
 
 #sidebar.active .tooltip {
@@ -116,14 +113,15 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: all .1s;
+  margin: 5px auto;
+  box-shadow: 0 0 .2rem var(--color-primary);
   border-radius: 12px;
   white-space: nowrap;
 }
 
-#sidebar a:hover {
-  background: var(--color-text);
+#sidebar li a:hover {
   color: var(--color-primary);
+  box-shadow: 0 0 0 .2rem var(--color-primary);
 }
 
 #sidebar #nav_list i {
@@ -141,7 +139,7 @@ a#light {
 .links_name {
   opacity: 0;
   pointer-events: none;
-  transition: all .2s ease;
+
 }
 
 #sidebar.active #form_search h2,
@@ -233,6 +231,7 @@ a#light {
 }
 
 #sidebar.active .profile {
+
   background: var(--bg-color);
 }
 
@@ -347,7 +346,7 @@ a#light {
   color: var(--color-text);
   font-size: 24px;
   cursor: pointer;
-  transition: color .1s;
+  transition: color .1s ease;
 }
 
 #hideSidebar i:focus,
