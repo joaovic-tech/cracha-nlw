@@ -45,6 +45,7 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
+  font-weight: bold;
 }
 
 body {
@@ -96,7 +97,8 @@ body {
 
 #seal {
   position: absolute;
-  bottom: 5.8rem;
+  bottom: 3.7rem;
+  left: .2rem;
   z-index: 1;
 }
 
@@ -227,7 +229,8 @@ hr {
 
   #badge_content {
     position: absolute;
-    width: 30%;
+    width: 100%;
+    max-width: 400px;
     height: 85%;
     min-height: auto;
     display: flex;

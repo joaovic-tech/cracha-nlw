@@ -19,5 +19,6 @@ function CloseModal(m) {
 
 function HideSidebar(){
   sidebar.classList.toggle('hide')
+  seal.classList.toggle('hide')
   hideSidebar.classList.toggle('icon')
 }
