@@ -55,11 +55,11 @@
           </a>
         </li>
         <li>
-          <a href="#modal_messages" onclick="ShowModal('modal_messages')">
+          <a href="https://joaovictor-portfolio.vercel.app/#contact" target="_blank">
             <i class="fa-regular fa-comment-dots"></i>
-            <span class="links_name">Messages</span>
+            <span class="links_name">Contact</span>
           </a>
-          <span class="tooltip">Messages</span>
+          <span class="tooltip">Contact</span>
         </li>
         <li>
           <a href="#modal_about" onclick="ShowModal('modal_about')">
@@ -127,29 +127,35 @@
       </ul>
     </section>
 
-    <section id="modal_messages" class="modal">
-      <!-- modal_messages -->
-      <i
-        class="fa-solid fa-xmark"
-        id="closeModal"
-        onclick="CloseModal('modal_messages')"
-      ></i>
-      <h2>Messages</h2>
-      <form>
-        <fieldset>
-          <legend>Title</legend>
-          <input type="text" />
-        </fieldset>
-      </form>
-    </section>
-
-    <section id="modal_about" class="modal showModal">
-      <!-- modal_about -->
+    <!-- modal_about -->
+    <section id="modal_about" class="modal">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+        id="svg_AboutTop">
+        <path
+          class="svgAbout"
+          fill="#E4E4E4"
+          fill-opacity="1"
+          d="M0,0L48,42.7C96,85,192,171,288,181.3C384,192,480,128,576,101.3C672,75,768,85,864,101.3C960,117,1056,139,1152,165.3C1248,192,1344,224,1392,240L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
       <i
         class="fa-solid fa-xmark"
         id="closeModal"
         onclick="CloseModal('modal_about')"
       ></i>
+      <div id="cardIcon">
+        <div id="squareIcon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div id="linescard">
+          <hr class="lineCard" />
+          <hr class="lineCard" />
+          <hr class="lineCard" />
+          <hr class="lineCard" />
+          <hr class="lineCard ls" />
+          <hr class="lineCard l" />
+        </div>
+      </div>
       <div id="contentAbout">
         <div class="groupAbout">
           <h2>About Github User Card</h2>
@@ -157,14 +163,9 @@
             This card was made with a github api in pursuit of being the virtual
             card for developers all over the world.
           </p>
-        </div>
-        <div class="content_iconsAbout">
-          <i class="fa-solid fa-circle-info iconAbout Icon_info"></i>
-          <i class="fa-solid fa-circle-question iconAbout Icon_question"></i>
-          </i><i class="fa-solid fa-code iconAbout Icon_code"></i>
-          <i class="fa-solid fa-desktop iconAbout Icon_desktop"></i>
-          <i class="fa-solid fa-id-card iconAbout Icon_card"></i>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"/></svg>
+          <hr>
+          <h3>How was the search engine made?</h3>
+          <p>Search is performed through the API that is located in this <a href="https://api.github.com/">link</a>. This link + the username, for example (https://api.github.com/users/joaovic-tech), makes it possible to get certain information, for example, full name, bio, repositorys numbers, etc. Learn more in <a href="https://github.com/joaovic-tech/cracha-nlw">repository</a>.</p>
         </div>
       </div>
       <svg
