@@ -8,7 +8,7 @@ Virtual badge created in ORIGIN trail at NLW Heat
  - [My Portfolio](https://github.com/matiassingers/awesome-readme)
  - [Application Layout](https://www.figma.com/community/file/1031698737363668691/%5BNLW-Heat---Mission%3A-Origin%5D-DoWhile2021)
  - [Colors](#colors)
- - [Tamplete](#tamplete)
+ - [Tampletes](#tampletes)
 
 ## Functionalities
 
@@ -100,18 +100,46 @@ Now to get all the values just put `data.name` to get the full name for example.
 ---
 # Application Information
 
+<div align="center" id="tampletes">
+
+ 
+ <img width="500px" src="./tampletes/ddd.png" />
+ <img width="500px" src="./tampletes/dld.png" />
+ 
+ <img width="340px" src="./tampletes/mdd.png" />
+ <img width="340px" src="./tampletes/mld.png" />
+ 
+ <img width="500px" src="./tampletes/ddb.png" />
+ <img width="500px" src="./tampletes/dlb.png" />
+ 
+ <img width="340px" src="./tampletes/mdb.png" />
+ <img width="340px" src="./tampletes/mlb.png" />
+ 
+ <img width="500px" src="./tampletes/ddg.png" />
+ <img width="500px" src="./tampletes/dlg.png" />
+ 
+ <img width="340px" src="./tampletes/mdg.png" />
+ <img width="340px" src="./tampletes/mlg.png" />
+ 
+ <img width="500px" src="./tampletes/ddp.png" />
+ <img width="500px" src="./tampletes/dlp.png" />
+ 
+ <img width="340px" src="./tampletes/mdp.png" />
+ <img width="340px" src="./tampletes/mlp.png" />
+ 
+</div>
 
 <div id="colors">
  
-## NLW Main Colors
- 
-| Colors             | Hexadecimal                                                      |
-| ------------------ | ---------------------------------------------------------------- |
-| --bg               | ![#09090A](https://via.placeholder.com/10/09090A?text=+) #09090A |
-| --bg-color         | ![#202024](https://via.placeholder.com/10/202024?text=+) #202024 |
-| --color-text       | ![#e0e0e5](https://via.placeholder.com/10/e0e0e5?text=+) #e0e0e5 |
-| --color-primary    | ![#FF008E](https://via.placeholder.com/10/FF008E?text=+) #FF008E |
-| --color-secundary  | ![#FFCD1E](https://via.placeholder.com/10/FFCD1E?text=+) #FFCD1E |
+ ## NLW Main Colors
+
+ | Colors             | Hexadecimal                                                      |
+ | ------------------ | ---------------------------------------------------------------- |
+ | --bg               | ![#09090A](https://via.placeholder.com/10/09090A?text=+) #09090A |
+ | --bg-color         | ![#202024](https://via.placeholder.com/10/202024?text=+) #202024 |
+ | --color-text       | ![#e0e0e5](https://via.placeholder.com/10/e0e0e5?text=+) #e0e0e5 |
+ | --color-primary    | ![#FF008E](https://via.placeholder.com/10/FF008E?text=+) #FF008E |
+ | --color-secundary  | ![#FFCD1E](https://via.placeholder.com/10/FFCD1E?text=+) #FFCD1E |
  
 </div>
 
