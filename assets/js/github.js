@@ -3,15 +3,19 @@ btnSearch.addEventListener('click', function (e) {
   if (sidebar.className == 'active') {
     if (ISearch.value.length > 0) {
       GithubProfile(ISearch.value)
-      if(ISearch.value == 'joaovic-tech'){
+      if (ISearch.value == 'joaovic-tech') {
         message.style.display = 'flex'
         msg_success.style.display = 'block'
-        textAdmin.innerHTML = "<i class='fa-solid fa-face-smile-wink'></i> Hey that's me!"
+        textAdmin.innerHTML =
+          "Hey that's me! <i class='fa-solid fa-face-smile-wink'></i>"
         function Message() {
           message.style.display = 'none'
           msg_success.style.display = 'none'
         }
         setTimeout(Message, 3000)
+      } else {
+        textAdmin.innerHTML =
+          'User found <i class="fa-solid fa-circle-check"></i>'
       }
       ISearch.value = ''
     }
@@ -58,9 +62,13 @@ function GithubProfile(githubLogin) {
     })
 }
 var pathURL = window.location.href
-if (pathURL != 'http://badge-github.vercel.app/') {
+if (
+  pathURL != 'http://badge-github.vercel.app/' ||
+  pathURL != 'http://localhost:2000'
+) {
   pathURL = pathURL.replace('http://badge-github.vercel.app/', '')
-  GithubProfile(pathURL)
+
+  pathURL != '' ? GithubProfile(pathURL) : GithubProfile('joaovic-tech')
 } else {
   GithubProfile('joaovic-tech')
 }
