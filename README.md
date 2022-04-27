@@ -107,35 +107,6 @@ if (data.message != 'Not Found')
 ---
 # Application Information
 
-<div align="center" id="tampletes">
-
- 
- <img width="500px" src="./tampletes/ddd.png" />
- <img width="500px" src="./tampletes/dld.png" />
- <img width="240px" src="./tampletes/mdd.png" />
- <img width="240px" src="./tampletes/mld.png" />
- 
- ---
- <img width="500px" src="./tampletes/ddb.png" />
- <img width="500px" src="./tampletes/dlb.png" />
- <img width="240px" src="./tampletes/mdb.png" />
- <img width="240px" src="./tampletes/mlb.png" />
- 
- ---
- <img width="500px" src="./tampletes/ddg.png" />
- <img width="500px" src="./tampletes/dlg.png" />
- <img width="240px" src="./tampletes/mdg.png" />
- <img width="240px" src="./tampletes/mlg.png" />
- 
- ---
- <img width="500px" src="./tampletes/ddp.png" />
- <img width="500px" src="./tampletes/dlp.png" />
- <img width="240px" src="./tampletes/mdp.png" />
- <img width="240px" src="./tampletes/mlp.png" />
- 
-</div>
-
- ---
 <div id="colors">
  
  ## NLW Main Colors
