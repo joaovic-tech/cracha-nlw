@@ -36,8 +36,10 @@ Virtual badge created in ORIGIN trail at NLW Heat
 ```
 
 ## Command to deploy the project
+- With your terminal open and inside the folder where the project will be
+- Type in your terminal
 ```
-  git clone https://github.com/joaovic-tech/badge-nlw/
+  git clone https://github.com/joaovic-tech/badge-nlw.git
 ```
 ---
 ## ``Function`` for get user data 
