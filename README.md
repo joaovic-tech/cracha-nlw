@@ -1,10 +1,10 @@
-# cracha-nlw
+# badge-nlw
 Virtual badge created in ORIGIN trail at NLW Heat
 <hr>
 
 ## Reference
 
- - [Virtual Badge](link)
+ - [Virtual Badge](https://badge-github.vercel.app/)
  - [Tamplete](tamplete)
  - [My Portfolio](https://github.com/matiassingers/awesome-readme)
  - [Application Layout](https://www.figma.com/community/file/1031698737363668691/%5BNLW-Heat---Mission%3A-Origin%5D-DoWhile2021)
@@ -36,16 +36,8 @@ Virtual badge created in ORIGIN trail at NLW Heat
 ```
 
 ## Command to deploy the project
-
-To deploy this project
-- Enter the folder where the project will be
-- type the command below:
 ```
-  git clone https://github.com/joaovic-tech/cracha-nlw/
-```
-Ready! now just enter the folder in the project
-```
-  cd cracha-nlw
+  git clone https://github.com/joaovic-tech/badge-nlw/
 ```
 ---
 ## ``Function`` for get user data 
