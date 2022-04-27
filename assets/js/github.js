@@ -1,3 +1,4 @@
+// input search
 btnSearch.addEventListener('click', function (e) {
   e.preventDefault()
   if (sidebar.className == 'active') {
@@ -26,6 +27,7 @@ btnSearch.addEventListener('click', function (e) {
 
 function GithubProfile(githubLogin) {
   const url = `https://api.github.com/users/${githubLogin}`
+  url.replace('http://localhost:2000/', '')
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -61,12 +63,21 @@ function GithubProfile(githubLogin) {
       }
     })
 }
+
+// search by url
 var pathURL = window.location.href
-if (pathURL != 'https://badge-github.vercel.app/') {
-  pathURL = pathURL.replace('https://badge-github.vercel.app/', '')
-  if(pathURL != '#modal_color' || pathURL != '#modal_mode' || pathURL != '#modal_about'){
+var localhost = 'http://localhost:2000/'
+var linkSite = 'https://badge-github.vercel.app/'
+
+if (pathURL != linkSite) {
+  pathURL = pathURL.replace(linkSite, '')
+  pathURL = pathURL.replace('#modal_color', '')
+  pathURL = pathURL.replace('#modal_mode', '')
+  pathURL = pathURL.replace('#modal_about', '')
+  if (pathURL.length > 0) {
     GithubProfile(pathURL)
   }
-} else {
+}
+if(pathURL == linkSite){
   GithubProfile('joaovic-tech')
 }

@@ -37,7 +37,7 @@
   }
 
   #quebra {
-    background-image: url(../svgs/quebra.svg);
+    background-image: url(/svgs/quebra.svg);
     background-size: cover;
     background-position: center;
     width: 16%;
