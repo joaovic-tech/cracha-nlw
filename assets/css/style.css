@@ -65,7 +65,6 @@ body {
   min-height: 812px;
   height: 100vh;
   border-radius: .8rem;
-  animation: wobble 2s;
 }
 
 #badge_content::before {
