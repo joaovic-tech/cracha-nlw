@@ -73,11 +73,18 @@ See the code below:
 .then(response => response.json())
 ```
 In this line we are taking the object and transforming the values into json
-And then assigning all these values in data
+And then assigning all these values in data.
 ```js
 .then(data => {
 ```
 Now to get all the values just put `data.name` to get the full name for example.
+
+when we send a value to the api and this value is invalid, a message appears saying it was not found
+so I used an `if` to check if the user was found
+```js
+if (data.message != 'Not Found')
+```
+
 ---
 # For more information follow the api documentation
 
@@ -105,30 +112,30 @@ Now to get all the values just put `data.name` to get the full name for example.
  
  <img width="500px" src="./tampletes/ddd.png" />
  <img width="500px" src="./tampletes/dld.png" />
+ <img width="240px" src="./tampletes/mdd.png" />
+ <img width="240px" src="./tampletes/mld.png" />
  
- <img width="340px" src="./tampletes/mdd.png" />
- <img width="340px" src="./tampletes/mld.png" />
- 
+ ---
  <img width="500px" src="./tampletes/ddb.png" />
  <img width="500px" src="./tampletes/dlb.png" />
+ <img width="240px" src="./tampletes/mdb.png" />
+ <img width="240px" src="./tampletes/mlb.png" />
  
- <img width="340px" src="./tampletes/mdb.png" />
- <img width="340px" src="./tampletes/mlb.png" />
- 
+ ---
  <img width="500px" src="./tampletes/ddg.png" />
  <img width="500px" src="./tampletes/dlg.png" />
+ <img width="240px" src="./tampletes/mdg.png" />
+ <img width="240px" src="./tampletes/mlg.png" />
  
- <img width="340px" src="./tampletes/mdg.png" />
- <img width="340px" src="./tampletes/mlg.png" />
- 
+ ---
  <img width="500px" src="./tampletes/ddp.png" />
  <img width="500px" src="./tampletes/dlp.png" />
- 
- <img width="340px" src="./tampletes/mdp.png" />
- <img width="340px" src="./tampletes/mlp.png" />
+ <img width="240px" src="./tampletes/mdp.png" />
+ <img width="240px" src="./tampletes/mlp.png" />
  
 </div>
 
+ ---
 <div id="colors">
  
  ## NLW Main Colors
