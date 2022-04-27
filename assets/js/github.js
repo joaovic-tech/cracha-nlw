@@ -62,13 +62,11 @@ function GithubProfile(githubLogin) {
     })
 }
 var pathURL = window.location.href
-if (
-  pathURL != 'http://badge-github.vercel.app/' ||
-  pathURL != 'http://localhost:2000'
-) {
-  pathURL = pathURL.replace('http://badge-github.vercel.app/', '')
-
-  pathURL != '' ? GithubProfile(pathURL) : GithubProfile('joaovic-tech')
+if (pathURL != 'https://badge-github.vercel.app/') {
+  pathURL = pathURL.replace('https://badge-github.vercel.app/', '')
+  if(pathURL != '#modal_color' || pathURL != '#modal_mode' || pathURL != '#modal_about'){
+    GithubProfile(pathURL)
+  }
 } else {
   GithubProfile('joaovic-tech')
 }
