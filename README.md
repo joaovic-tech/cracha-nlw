@@ -107,6 +107,9 @@ if (data.message != 'Not Found')
 ---
 # Application Information
 
+ <img src="./templates/desktop.png" />
+ <img src="./templates/mobile.png" />
+
 <div id="colors">
  
  ## NLW Main Colors
