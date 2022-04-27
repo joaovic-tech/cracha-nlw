@@ -46,6 +46,13 @@
     top: 3%;
     z-index: 0;
   }
+  
+  #seal {
+    position: absolute;
+    bottom: 4.3rem;
+    left: .2rem;
+    z-index: 1;
+  }
 
   .avatar {
     width: 10rem;
