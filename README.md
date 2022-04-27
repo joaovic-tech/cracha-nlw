@@ -85,6 +85,46 @@ so I used an `if` to check if the user was found
 if (data.message != 'Not Found')
 ```
 
+If you are running the project on your local machine, enter the file located in the `assets/js/github.js` directory and change the linkSite variable to localhost as shown in the code below:
+
+## Before
+```js
+var pathURL = window.location.href
+var localhost = 'http://localhost:2000/'
+var linkSite = 'https://badge-github.vercel.app/'
+
+if (pathURL != linkSite) {
+  pathURL = pathURL.replace(linkSite, '')
+  pathURL = pathURL.replace('#modal_color', '')
+  pathURL = pathURL.replace('#modal_mode', '')
+  pathURL = pathURL.replace('#modal_about', '')
+  if (pathURL.length > 0) {
+    GithubProfile(pathURL)
+  }
+}
+if(pathURL == linkSite){
+  GithubProfile('joaovic-tech')
+}
+```
+## After
+```js
+var pathURL = window.location.href
+var localhost = 'http://localhost:2000/'
+var linkSite = 'https://badge-github.vercel.app/'
+
+if (pathURL != localhost) {
+  pathURL = pathURL.replace(localhost, '')
+  pathURL = pathURL.replace('#modal_color', '')
+  pathURL = pathURL.replace('#modal_mode', '')
+  pathURL = pathURL.replace('#modal_about', '')
+  if (pathURL.length > 0) {
+    GithubProfile(pathURL)
+  }
+}
+if(pathURL == localhost){
+  GithubProfile('joaovic-tech')
+}
+```
 ---
 # For more information follow the api documentation
 
