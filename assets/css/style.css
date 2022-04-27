@@ -65,6 +65,7 @@ body {
   min-height: 812px;
   height: 100vh;
   border-radius: .8rem;
+  animation: wobble 2s;
 }
 
 #badge_content::before {
@@ -230,6 +231,7 @@ hr {
   text-align: center;
   border-radius: .2rem;
   z-index: 10;
+  animation: backInDown 500ms;
 }
 
 #msg_success,

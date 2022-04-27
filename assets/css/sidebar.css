@@ -26,6 +26,7 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 0 40px rgb(0 0 0 / 30%);
   padding: 6px 14px;
+  animation: backInLeft 2s;
   transition: width .2s ease;
 }
 
