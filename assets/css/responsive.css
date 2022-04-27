@@ -1,0 +1,591 @@
+@media (min-width: 960px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #badge_content {
+    position: absolute;
+    width: 25%;
+    height: 80%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card {
+    position: absolute;
+    top: 12%;
+    margin: auto;
+    max-width: 80%;
+  }
+
+  #faixa {
+    background-image: var(--img-range);
+    background-size: cover;
+    width: 13%;
+    height: 18%;
+    position: absolute;
+    bottom: 96%;
+    display: flex;
+    z-index: 2;
+  }
+
+  #quebra {
+    background-image: url(../svgs/quebra.svg);
+    background-size: cover;
+    background-position: center;
+    width: 16%;
+    height: 2%;
+    position: absolute;
+    top: 3%;
+    z-index: 0;
+  }
+
+  .avatar {
+    width: 10rem;
+    margin: auto;
+  }
+
+
+  #contImgUser {
+    width: 8rem;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    display: inline-block;
+  }
+
+  #contImgUser img {
+    width: 100%;
+    box-shadow: 0 0 2rem var(--bg);
+  }
+
+  p {
+    font-size: .8rem;
+  }
+}
+
+@media(min-width: 1440px) {
+  #seal {
+    bottom: 5rem;
+    left: -1rem;
+    width: 6rem;
+  }
+
+  #seal img {
+    width: 100%;
+  }
+
+  #contImgUser {
+    width: 10rem;
+  }
+
+  h2#userName {
+    font-size: 2rem;
+  }
+
+  #badge_content a {
+    font-size: 1.3rem;
+    margin: .4rem auto;
+  }
+
+  #badge_content p {
+    font-size: 1.2rem;
+    margin: auto;
+  }
+
+  #badge_content hr {
+    margin: 2rem auto;
+  }
+
+  .info span,
+  .info h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media(min-width: 2040px) {
+  .avatar {
+    width: 100%;
+  }
+
+  #seal {
+    bottom: 6rem;
+    left: 4.5rem;
+    width: 8rem;
+  }
+
+  #contImgUser {
+    width: 12rem;
+  }
+
+  #badge_content p {
+    font-size: 1.5rem;
+    margin: 3rem auto;
+  }
+
+  #badge_content hr {
+    margin: 4rem auto;
+  }
+
+  .info span,
+  .info h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media(min-width: 2560px) {
+  #seal {
+    bottom: 8rem;
+    left: 8rem;
+    width: 10rem;
+  }
+
+  #contImgUser {
+    width: 15rem;
+  }
+
+  h2#userName {
+    font-size: 3rem;
+  }
+
+  #badge_content a {
+    font-size: 1.8rem;
+  }
+
+  #badge_content p {
+    font-size: 2rem;
+    margin: 3rem auto;
+  }
+
+  #badge_content hr {
+    margin: 4rem auto;
+  }
+
+  .info span,
+  .info h2 {
+    font-size: 2rem;
+  }
+
+  /* nav */
+  #sidebar {
+    width: 128px;
+  }
+
+  #sidebar.active {
+    width: 520px;
+  }
+
+  #sidebar hr {
+    margin: 4rem auto;
+  }
+
+  .logo {
+    height: 100px;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo i {
+    font-size: 3.5rem;
+  }
+
+  .logo_name {
+    font-size: 2rem;
+    margin: 0 0 0 1rem;
+  }
+
+  #sidebar.active #btnMenu {
+    left: 88%;
+  }
+
+  #btnMenu {
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    font-size: 3rem;
+  }
+
+  #sidebar #nav_list li {
+    height: 100px;
+    line-height: 100px;
+  }
+
+  #sidebar #nav_list i {
+    height: 100px;
+    min-width: 100px;
+    line-height: 100px;
+    border-radius: 2rem;
+    font-size: 2.6rem;
+  }
+
+  #sidebar #nav_list li a {
+    font-size: 2rem;
+  }
+
+  .tooltip {
+    font-size: 2rem;
+    left: 200px;
+  }
+
+  #form_search h2 {
+    font-size: 3rem;
+  }
+
+  #form_search input {
+    height: 100px;
+    border-radius: 1.5rem;
+    border-bottom: .4rem solid var(--color-primary);
+    padding-left: 2rem;
+    padding-right: 56px;
+    font-size: 3rem;
+  }
+
+  #form_search input:focus {
+    box-shadow: 0 0 0 .4rem var(--color-primary);
+  }
+
+  #btnSearch {
+    height: 100px;
+    min-width: 100px;
+    line-height: 100px;
+    border: .4rem solid transparent;
+    border-bottom: .4rem solid var(--color-primary);
+    border-bottom-right-radius: 1.5rem;
+    font-size: 3rem;
+  }
+
+  #hideSidebar i {
+    font-size: 3rem;
+    margin: .2rem 2rem;
+  }
+
+  #profile_content {
+    height: 110px;
+  }
+
+  .profile {
+    height: 100px;
+  }
+
+  .profile_details img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .name_job {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .job {
+    font-size: 1.5rem;
+  }
+
+  #IAdmin {
+    min-width: 100px;
+    line-height: 100px;
+    font-size: 3rem;
+  }
+
+  /* Modals */
+  .groupAbout h3,
+  .groupAbout h2 {
+    font-size: 5rem;
+  }
+
+  .groupAbout h2::after {
+    height: .5rem;
+  }
+
+  .groupAbout p {
+    font-size: 2.5rem;
+  }
+
+  .groupAbout hr {
+    height: .5rem;
+  }
+
+  .fa-xmark {
+    font-size: 4rem;
+    top: 1rem;
+    right: 2rem;
+  }
+
+  .titleModal {
+    font-size: 4rem;
+  }
+
+  #contentTheme li {
+    width: 600px;
+    height: 600px;
+    font-size: 2rem;
+    justify-content: center;
+  }
+
+  .theme {
+    width: 185px;
+    height: 185px;
+  }
+}
+
+@media(min-width: 4080px) {
+  #badge_content {
+    position: absolute;
+    top: 12rem;
+  }
+
+  #seal {
+    bottom: 13rem;
+    left: 10rem;
+    width: 16rem;
+  }
+
+  #contImgUser {
+    width: 25rem;
+  }
+
+  h2#userName {
+    font-size: 5rem;
+  }
+
+  #badge_content a {
+    font-size: 2.8rem;
+  }
+
+  #badge_content p {
+    font-size: 3rem;
+  }
+
+  #badge_content hr {
+    height: .5rem;
+    box-shadow: 0 0 20px var(--color-primary);
+    margin: 5rem auto;
+  }
+
+  .info span,
+  .info h2 {
+    font-size: 3rem;
+  }
+
+  /* Modals */
+  .groupAbout h3,
+  .groupAbout h2 {
+    font-size: 8rem;
+  }
+
+  .groupAbout p {
+    font-size: 4.5rem;
+    margin: 5rem 0;
+  }
+
+  .groupAbout hr {
+    height: .8rem;
+  }
+
+  .fa-xmark {
+    font-size: 7rem;
+    top: 2rem;
+    right: 3rem;
+  }
+
+  #hideSidebar i {
+    font-size: 4rem;
+  }
+}
+
+@media(min-width: 5440px) {
+  #badge_content {
+    position: absolute;
+    top: 12rem;
+    border-radius: 24px;
+  }
+
+  #badge_content::before {
+    border-radius: 24px;
+  }
+
+  /* card */
+
+  .avatar {
+    margin: 4rem 0;
+  }
+
+  #seal {
+    bottom: 16rem;
+    left: 16rem;
+    width: 20rem;
+  }
+
+  #contImgUser {
+    width: 30rem;
+  }
+
+  h2#userName {
+    font-size: 6rem;
+  }
+
+  #badge_content a {
+    font-size: 3.8rem;
+  }
+
+  #badge_content p {
+    font-size: 4rem;
+  }
+
+  #badge_content hr {
+    height: .6rem;
+    margin: 6rem auto;
+  }
+
+  .info span,
+  .info h2 {
+    font-size: 4rem;
+  }
+
+  #hideSidebar i {
+    font-size: 6rem;
+    margin-bottom: 50px;
+    margin-right: 50px;
+  }
+
+  /* nav */
+  #sidebar {
+    width: 280px;
+    padding: 40px;
+  }
+
+  #sidebar.active {
+    width: 912px;
+  }
+
+  #sidebar hr {
+    height: .7rem;
+    box-shadow: 0 0 50px var(--color-primary);
+    margin: 4rem auto;
+  }
+
+  .logo {
+    height: 200px;
+  }
+
+  .logo i {
+    font-size: 7rem;
+  }
+
+  .logo_name {
+    font-size: 4.5rem;
+    margin: 0 0 0 2rem;
+  }
+
+  #btnMenu {
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    font-size: 5rem;
+  }
+
+  #sidebar #nav_list li {
+    height: 200px;
+    line-height: 200px;
+  }
+
+  #sidebar #nav_list i {
+    height: 200px;
+    min-width: 200px;
+    line-height: 200px;
+    border-radius: 2rem;
+    font-size: 4rem;
+  }
+
+  #sidebar #nav_list li a {
+    font-size: 3rem;
+  }
+
+  #sidebar a {
+    box-shadow: 0 0 .8rem var(--color-primary);
+    border-radius: 24px;
+  }
+
+  .tooltip {
+    font-size: 4rem;
+    left: 400px;
+  }
+
+  #form_search h2 {
+    font-size: 8rem;
+  }
+
+  #form_search input {
+    height: 200px;
+    border-radius: 2rem;
+    border-bottom: 1rem solid var(--color-primary);
+    padding-left: 3rem;
+    padding-right: 56px;
+    font-size: 4rem;
+  }
+
+  #form_search input:focus {
+    box-shadow: 0 0 0 1rem var(--color-primary);
+  }
+
+  #btnSearch {
+    height: 200px;
+    min-width: 200px;
+    line-height: 200px;
+    border: 1rem solid transparent;
+    border-bottom: 1rem solid var(--color-primary);
+    border-bottom-right-radius: 2rem;
+    font-size: 6rem;
+  }
+
+  #btnSearch:hover {
+    border-radius: 2rem;
+  }
+
+  #hideSidebar i {
+    font-size: 3rem;
+    margin: .2rem 2rem;
+  }
+
+  #profile_content {
+    height: 210px;
+  }
+
+  .profile {
+    height: 200px;
+  }
+
+  .profile_details img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .name_job {
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .job {
+    font-size: 3rem;
+  }
+
+  #IAdmin {
+    min-width: 200px;
+    line-height: 200px;
+    font-size: 5rem;
+    border-radius: 2rem;
+  }
+}
