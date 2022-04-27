@@ -5,35 +5,17 @@ Virtual badge created in ORIGIN trail at NLW Heat
 ## Reference
 
  - [Virtual Badge](https://badge-github.vercel.app/)
- - [Tamplete](tamplete)
  - [My Portfolio](https://github.com/matiassingers/awesome-readme)
  - [Application Layout](https://www.figma.com/community/file/1031698737363668691/%5BNLW-Heat---Mission%3A-Origin%5D-DoWhile2021)
+ - [Colors](#colors)
+ - [Tamplete](#tamplete)
 
 ## Functionalities
 
-- Find all github users
-- adapted for web and mobile devices
-- theme dark e light
-
-## API Documentation
-
-- [API Link](https://api.github.com/)
-
-#### Returns user data
-
-```https
-  GET /users/{user}
-```
-
-| Route     | user_url | UserName     |
-| :--------- | :--------- | :--------- |
-| `https://api.github.com/` |`users` | `{user}` |
-
-## Example
-
-```https
-  https://api.github.com/users/joaovic-tech
-```
+- Search all github users
+- Adapted for web and mobile devices
+- Dark and light theme
+- Color change
 
 ## Command to deploy the project
 - With your terminal open and inside the folder where the project will be
@@ -42,7 +24,11 @@ Virtual badge created in ORIGIN trail at NLW Heat
   git clone https://github.com/joaovic-tech/badge-nlw.git
 ```
 ---
+# Get API info with javascript
+
 ## ``Function`` for get user data 
+
+Here we have a function that will take the url(API) + the username and bring the appropriate data
 
 ```js
 function GithubProfile(githubLogin) {
@@ -77,7 +63,7 @@ fetch(url)
 ---
 Method `then`
 
-Returns a promise. In this case, a response that comes as an object
+Returns a promise. In this case, a response that comes as an object.
 ```js 
 then()
 ```
@@ -91,12 +77,34 @@ And then assigning all these values in data
 ```js
 .then(data => {
 ```
-### Now to get all the values just put the `data.name` variable to get the full name for example.
+Now to get all the values just put `data.name` to get the full name for example.
+---
+# For more information follow the api documentation
+
+- [API Documentation](https://api.github.com/)
+
+#### User data path
+
+```https
+  GET /users/{user}
+```
+| Route     | user_url | UserName     |
+| :--------- | :--------- | :--------- |
+| `https://api.github.com/` |`users` | `{user}` |
+
+## Example
+
+```https
+  https://api.github.com/users/joaovic-tech
+```
 ---
 # Application Information
 
-## NLW Main Colors
 
+<div id="colors">
+ 
+## NLW Main Colors
+ 
 | Colors             | Hexadecimal                                                      |
 | ------------------ | ---------------------------------------------------------------- |
 | --bg               | ![#09090A](https://via.placeholder.com/10/09090A?text=+) #09090A |
@@ -104,8 +112,10 @@ And then assigning all these values in data
 | --color-text       | ![#e0e0e5](https://via.placeholder.com/10/e0e0e5?text=+) #e0e0e5 |
 | --color-primary    | ![#FF008E](https://via.placeholder.com/10/FF008E?text=+) #FF008E |
 | --color-secundary  | ![#FFCD1E](https://via.placeholder.com/10/FFCD1E?text=+) #FFCD1E |
+ 
+</div>
 
-<div align="left" id="id">
+<div align="left">
   
   ## technologies used
   
