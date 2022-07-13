@@ -2,7 +2,7 @@
 Virtual badge created in ORIGIN trail at NLW Heat
 <hr>
 
-<h4 align="center">🌙Cartoon🔆</h4>
+<h4 align="center">Badges📛</h4>
 
 | Badge 1                                     | Badge 2                                            |
 |:-------------------------------------------------:|:-----------------------------------------------:|
