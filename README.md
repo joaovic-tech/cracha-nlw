@@ -2,6 +2,14 @@
 Virtual badge created in ORIGIN trail at NLW Heat
 <hr>
 
+<h4 align="center">🌙Cartoon🔆</h4>
+
+| Badge 1                                     | Badge 2                                            |
+|:-------------------------------------------------:|:-----------------------------------------------:|
+| ![](./templates/1.png)  | ![](./templates/2.png)         |
+| Badge 3                                   | Badge 4                                 |
+| ![](./templates/3.png) | ![](./templates/4.png) |
+
 ## Reference
 
  - [Virtual Badge](https://badge-github.vercel.app/)
@@ -146,9 +154,6 @@ if(pathURL == localhost){
 ```
 ---
 # Application Information
-
- <img src="./templates/desktop.png" />
- <img src="./templates/mobile.png" />
 
 <div id="colors">
  
