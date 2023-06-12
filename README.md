@@ -6,9 +6,9 @@ Virtual badge created in ORIGIN trail at NLW Heat
 
 | Badge 1                                     | Badge 2                                            |
 |:-------------------------------------------------:|:-----------------------------------------------:|
-| ![](./templates/1.png)  | ![](./templates/2.png)         |
+| ![](./template/1.png)  | ![](./template/2.png)         |
 | Badge 3                                   | Badge 4                                 |
-| ![](./templates/3.png) | ![](./templates/4.png) |
+| ![](./template/3.png) | ![](./template/4.png) |
 
 ## Reference
 
